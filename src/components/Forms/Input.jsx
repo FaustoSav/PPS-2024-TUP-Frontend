@@ -26,7 +26,7 @@ export const Input = ({ name, label, register, placeholder, errors }) => {
 
   return (
     <div className="input-container">
-      <label className="font-[500] text-dark-light tracking-tight text-sm tablet:text-base">
+      <label className="label">
         {label}
       </label>
       <input {...register(name)} placeholder={placeholder} className="input" />

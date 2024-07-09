@@ -11,7 +11,7 @@ export const CartItem = ({ item }) => {
   const { DeleteItem } = useDeleleteItem();
 
   return (
-    <article className="flex justify-between text-dark-light  w-full  h-[160px] sm:h-[180px] lg:h-[200px] borderDark border-[.5px] border-opacity-15 border-x-0 border-t-0  py-8 ">
+    <article className="flex justify-between text-dark-light  w-full  h-[160px] sm:h-[180px] lg:h-[200px] borderDark border-[.5px] border-opacity-15 border-x-0 border-t-0 dark:border-secondaryDark py-8 ">
       <div className="w-auto ">
         <img
           className="bg-bgSemiLight rounded-md  aspect-square h-full lg:p-2  "
@@ -27,7 +27,7 @@ export const CartItem = ({ item }) => {
         <div className="addContainer   ">
           <div
             onClick={() => DecreaseItemQuantity(item)}
-            className="cart_quantity-change-item  "
+            className="cart_quantity-change-item dark:hover:bg-opacity-70 "
           >
             –
           </div>
@@ -36,7 +36,7 @@ export const CartItem = ({ item }) => {
           </div>
           <div
             onClick={() => AddItemQuantity(item)}
-            className="cart_quantity-change-item  "
+            className="cart_quantity-change-item dark:hover:bg-opacity-70 "
           >
             +
           </div>

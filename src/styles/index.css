@@ -9,6 +9,27 @@
     -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.05);
   }
+
+
+  
+#style-4::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #000000;
+}
+
+#style-4::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-4::-webkit-scrollbar-thumb
+{
+	background-color: #F5F5F5;
+	
+}
+
 }
 
 
@@ -16,7 +37,9 @@
 
 
   /* SHARED */
-
+  .center-absolute {
+    @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+  }
   .bg-dark-white {
     @apply bg-BgDark dark:bg-bgLight
   }
@@ -99,9 +122,11 @@
   /* FORM */
 
   .input {
-    @apply block w-full rounded-md border-0 p-1.5 text-sm text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset tracking-wider sm:leading-6 placeholder:text-[13px] tablet:text-base tablet:placeholder:text-sm
+    @apply block w-full rounded-md p-1.5 text-sm text-gray-900 shadow-sm   placeholder:text-gray-400  tracking-wider sm:leading-6 placeholder:text-[13px] tablet:text-base tablet:placeholder:text-sm dark:bg-secondaryDark dark:borderLight dark:border-opacity-10 borderDark dark:borderLight
   }
-
+  .label{
+    @apply font-[500] text-dark-light tracking-tight text-sm tablet:text-base dark:font-[400]
+  }
   .input-container {
     @apply flex flex-col
   }

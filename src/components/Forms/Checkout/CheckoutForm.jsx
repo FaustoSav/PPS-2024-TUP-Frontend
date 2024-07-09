@@ -24,7 +24,7 @@ export const CheckoutForm = () => {
   };
   return (
     <form
-      className="grid grid-cols-3 grid-rows-6 gap-x-3 gap-y-5 max-w-3xl md:w-1/2 "
+      className="grid grid-cols-3 grid-rows-6 gap-x-3 gap-y-5  md:w-1/2 "
       onSubmit={handleSubmit(onSubmit)}
     >
       {checkoutFormData.map((input) => {

@@ -49,7 +49,7 @@ export const checkoutFormData = [
   },
   {
     name: 'codigoPostal',
-    label: 'Código Postal',
+    label: 'CP',
     placeholder: '1000',
     customClass: 'col-span-3 sm:col-span-1',
   },

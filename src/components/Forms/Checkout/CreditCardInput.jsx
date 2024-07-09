@@ -3,11 +3,12 @@ import ReactInputMask from "react-input-mask";
 export const CreditCardInput = ({ register, name, placeholder, errors }) => {
   return (
     <div className="input-container">
-      <label className="font-[500] text-dark-light tracking-tight text-sm tablet:text-base">
+      <label className="label">
         Número de tarjeta
       </label>
       <ReactInputMask
         mask="9999 9999 9999 9999"
+        maskChar={" "}
         {...register(name)}
         placeholder={placeholder}
       >
