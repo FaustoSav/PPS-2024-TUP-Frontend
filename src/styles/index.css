@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  .customShadow {
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.05);
+  }
+}
+
+
+@layer components {
+
+
+  /* SHARED */
+
+  .bg-dark-white {
+    @apply bg-BgDark dark:bg-bgLight
+  }
+  .bg-light-dark{
+    @apply bg-bgLight dark:bg-BgDark
+  }
+  .text-light-dark {
+    @apply text-light dark:text-primaryDark
+  }
+  .text-dark-light {
+    @apply text-primaryDark dark:text-light
+  }
+  .input-placeholder{
+    @apply placeholder:
+  }
+
+
+  body {
+    @apply font-montserrat text-secondaryDark
+  }
+
+  .theme-icon__container {
+    @apply py-1 px-2 md:cursor-pointer flex w-full tablet:hover:bg-opac rounded;
+  }
+
+  .toggle-theme__container {
+    @apply flex justify-center items-center gap-2 tablet:gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8;
+  }
+
+  .subtitle {
+    @apply font-[600] tracking-wider text-2xl w-full
+  }
+
+  .bg-opac {
+    @apply bg-gray-400 bg-opacity-5;
+  }
+
+  .logo {
+    @apply w-[24px] cursor-pointer tablet:w-[26px] sm:w-[30px] fill-white stroke-white dark:fill-black dark:stroke-black 
+  }
+  .logo-unsized{
+    @apply fill-white  dark:fill-black 
+  }
+  .borderLight {
+    @apply border-[1px] border-white border-opacity-20
+  }
+
+  .borderDark {
+    @apply border-[1px] border-black border-opacity-20
+  }
+
+  .border-light-dark {
+    @apply borderLight dark:borderDark
+  }
+
+  .customPadding {
+    @apply px-4 sm:p-8
+  }
+
+  .customWidth {
+    @apply max-w-[1280px] mx-auto
+  }
+
+  .cardBgLight {
+    @apply bg-bgLight rounded-lg dark:bg-secondaryDark dark:borderLight text-dark-light dark:hover:bg-primaryDark
+  }
+
+  /* ICONS */
+
+  .icon {
+    @apply aspect-square cursor-pointer w-8 fill-none
+  }
+
+  .nav-icon {
+    @apply w-8
+  }
+
+
+
+  /* FORM */
+
+  .input {
+    @apply block w-full rounded-md border-0 p-1.5 text-sm text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset tracking-wider sm:leading-6 placeholder:text-[13px] tablet:text-base tablet:placeholder:text-sm
+  }
+
+  .input-container {
+    @apply flex flex-col
+  }
+
+  .btn-submit {
+    @apply flex w-full justify-center rounded-md bg-primaryDark px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm
+  }
+
+}

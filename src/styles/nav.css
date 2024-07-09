@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+@layer components {
+
+
+  .toggleButton {
+    @apply absolute z-[101] outline-none border-none bg-transparent top-7 right-5 select-none tablet:cursor-pointer;
+
+  }
+  .nav-icon {
+    @apply w-8
+  }
+  .bar {
+    @apply h-[1.2px] transition-all duration-700 rounded-full z-10 w-full bg-light dark:bg-BgDark bg-opacity-90;
+  }
+}

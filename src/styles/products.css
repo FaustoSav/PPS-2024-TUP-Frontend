@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+@layer components {
+
+  .addContainer {
+    @apply flex  lg:h-[50px] items-center text-center  justify-evenly rounded-md text-sm cursor-pointer md:text-base w-full max-w-[200px] overflow-hidden  divide-x-[1.5px] dark:divide-x-0 ;
+  }
+
+  .cart_quantity-change-item {
+    @apply w-1/3  cursor-pointer bg-bgSemiLight dark:bg-secondaryDark  dark:text-light hover:bg-slate-200 dark:hover:bg-secondaryDark h-[40px] leading-[40px] select-none ;
+  }
+ 
+}

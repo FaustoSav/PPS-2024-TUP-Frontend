@@ -1,0 +1,12 @@
+FRONTEND
+  
+              Panel de administrador
+
+                 - Al apretar el boton para crear una nueva entiddad, replicar el funcionamiento de swagger generando un json con el scheme de la entidad a crear.
+
+              Perfil de Usuario
+
+                 - El endpoint para traer el perfil incluye el rol. Se va a mostrar X perfil dependiendo del rol.
+BACKEND
+              Categorias
+                 - Implementar una busqueda por nombre, para usarlo en la ruta.
