@@ -17,7 +17,6 @@ export const Summary = () => {
     <article className="bg-primaryDark w-full h-full customPadding rounded-lg   text-white  pb-5  ">
       <CartSummaryItem price={subTotal} title={'Sub total'} />
       <CartSummaryItem price={costoEnvio} title={'Costo de envío'} />
-
       <CartSummaryItem
         price={total}
         customStyle={'font-semibold'}

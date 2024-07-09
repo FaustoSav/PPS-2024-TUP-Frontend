@@ -6,7 +6,7 @@ export const Checkout = () => {
   return (
     <div className='py-12 flex items-center justify-center flex-col bg-light-dark '>
       <Subtitle text={'Checkout'}/>
-      <div className='flex gap-10 justify-center items-start'>
+      <div className='flex flex-col-reverse gap-10 justify-center items-start  md:flex-row'>
       <CheckoutForm />
       <CheckoutSummary/>
       </div>
