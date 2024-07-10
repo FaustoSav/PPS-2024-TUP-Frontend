@@ -29,7 +29,7 @@ export const Input = ({ name, label, register, placeholder, errors }) => {
       <label className="label">
         {label}
       </label>
-      <input {...register(name)} placeholder={placeholder} className="input" />
+      <input {...register(name)} placeholder={placeholder} className="input " />
       <p className="text-red-500 text-[13px] font-medium leading-[13px] mt-1">
         {errors?.message}
       </p>

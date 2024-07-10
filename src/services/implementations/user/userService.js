@@ -17,7 +17,7 @@ export const UpdateUsername = (id, newName) => {
 };
 
 export const SignInUser = (email, password) => {
-  return api.post('/authenticate/', {
+  return api.post('/login/', {
     email: email,
     password: password,
   });

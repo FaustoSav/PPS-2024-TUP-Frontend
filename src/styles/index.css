@@ -122,7 +122,7 @@
   /* FORM */
 
   .input {
-    @apply block w-full rounded-md p-1.5 text-sm text-gray-900 shadow-sm   placeholder:text-gray-400  tracking-wider sm:leading-6 placeholder:text-[13px] tablet:text-base tablet:placeholder:text-sm dark:bg-secondaryDark dark:borderLight dark:border-opacity-10 borderDark dark:borderLight
+    @apply block w-full rounded-md p-1.5 text-sm text-gray-900 shadow-sm   placeholder:text-gray-400  tracking-wider sm:leading-6 placeholder:text-[13px] tablet:text-base tablet:placeholder:text-sm dark:bg-secondaryDark dark:borderLight dark:border-opacity-10 borderDark dark:borderLight dark:text-darkLight
   }
   .label{
     @apply font-[500] text-dark-light tracking-tight text-sm tablet:text-base dark:font-[400]

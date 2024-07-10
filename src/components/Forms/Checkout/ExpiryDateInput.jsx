@@ -1,11 +1,9 @@
-import ReactInputMask from "react-input-mask";
+import ReactInputMask from 'react-input-mask';
 
 export const ExpiryDateInput = ({ register, name, placeholder, errors }) => {
   return (
     <div className="input-container">
-      <label className="label">
-        Fecha de expiración
-      </label>
+      <label className="label">Fecha de expiración</label>
       <ReactInputMask
         mask="99/99"
         maskChar={' '}
