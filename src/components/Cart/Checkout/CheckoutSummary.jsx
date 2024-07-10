@@ -14,12 +14,12 @@ export const CheckoutSummary = () => {
   }, [cartItems]);
   return (
     <section className="flex flex-col justify-center items-center borderDark  pt-0 rounded-xl mt-6  max-h-[520px] dark:bg-primaryDark w-full md:w-1/2 ">
-      <div className='overflow-y-scroll  px-2  w-full ' id='style-4'>
+      <div className='overflow-y-scroll  px-6  w-full ' id='style-4'>
         {cartItems.map((item, index) => {
           return (
             <article
               key={index}
-              className="flex  justify-between gap-3 w-full  h-[160px] sm:h-[180px]  borderDark border-[.5px] border-opacity-15 border-x-0 border-t-0 last:border-none py-8  text-dark-light first:py-6 first:h-[144px] first:sm:h-[164px] "
+              className="flex  justify-between gap-3 w-full  h-[160px] sm:h-[180px]  borderDark border-[.5px] border-opacity-15 border-x-0 border-t-0 last:border-none py-8  text-dark-light  "
             >
               <div className="w-auto ">
                 <img
@@ -44,7 +44,7 @@ export const CheckoutSummary = () => {
           );
         })}
       </div>
-      <div className='w-full dark:bg-secondaryDark  rounded sm:rounded-lg px-5'>
+      <div className='w-full dark:bg-secondaryDark borderDark border-b-0 border-x-0  rounded-b sm:rounded-b-lg px-5'>
       <CartSummaryItem price={subTotal} title={'Sub total'} />
       <CartSummaryItem price={costoEnvio} title={'Costo de envío'} />
       <CartSummaryItem

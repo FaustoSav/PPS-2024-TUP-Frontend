@@ -11,7 +11,6 @@ export const useGetCategories = () => {
 
     GetCategories()
       .then((catResponse) => {
-        console.log(catResponse.data);
         setCategories(catResponse.data);
       })
       .catch((err) => setError(err))

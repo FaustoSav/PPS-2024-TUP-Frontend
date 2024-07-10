@@ -2,9 +2,8 @@ import ChatBot from "react-simple-chatbot";
 import { useProductById } from "../../hooks/products/useProductById";
 
 const FornitureChatBot = () => {
-  const HandleEnd = (steps, values) => {
-    console.log(values);
-    console.log(steps);
+  const HandleEnd = ( values) => {
+   
     useProductById(values.toString().trim());
   };
   const steps = [
