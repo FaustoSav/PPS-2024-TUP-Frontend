@@ -4,7 +4,6 @@ import { NavListItems } from './NavListItems';
 import { Search } from './Search';
 import { CustomLink } from '../shared/CustomLink';
 import { User } from '../../icons/User';
-import { ToggleTheme } from '../shared/ToggleTheme';
 
 export const Menu = () => {
   const { showMenu } = useContext(NavContext);
@@ -15,7 +14,6 @@ export const Menu = () => {
         showMenu ? 'left-0' : 'left-full'
       }`}
     >
-      <ToggleTheme />
       <Search />
       <div className="flex items-center gap-4 sm:hidden">
         <User customStyle="w-6 " />

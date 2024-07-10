@@ -1,12 +1,17 @@
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { registerSchema } from "../../../services/validator/registerScheme";
-import { Input } from "../Input";
-import { InputPassword } from "../InputPassword";
-import { FormHeader } from "../FormHeader";
-import { FormFooter } from "../FormFooter";
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { registerSchema } from '../../../services/validator/registerScheme';
+import { Input } from '../Input';
+import { InputPassword } from '../InputPassword';
+import { FormHeader } from '../FormHeader';
+import { FormFooter } from '../FormFooter';
+import { useContext } from 'react';
+import { AuthContext } from '../../../context/Auth/AuthContext';
+import { Navigate } from 'react-router-dom';
 
 export const Register = () => {
+  const { isAuthenticated } = useContext(AuthContext);
+
   const {
     register,
     handleSubmit,
@@ -19,9 +24,12 @@ export const Register = () => {
     console.log(data);
     console.log(errors);
   };
+  if (isAuthenticated) {
+    return <Navigate to={'/'} />;
+  }
   return (
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-      <FormHeader title={"Crear Cuenta"} />
+      <FormHeader title={'Crear Cuenta'} />
 
       <form
         className="space-y-6 mt-10 sm:mx-auto sm:w-full sm:max-w-sm"
@@ -29,24 +37,24 @@ export const Register = () => {
       >
         <Input
           errors={errors.fullName}
-          name={"fullName"}
-          label={"Nombre Completo"}
-          placeholder={"Pedro Perez"}
+          name={'fullName'}
+          label={'Nombre Completo'}
+          placeholder={'Pedro Perez'}
           register={register}
         />
         <Input
           errors={errors.email}
-          name={"email"}
-          label={"Correo electronico"}
-          placeholder={"pedro@gmail.com"}
+          name={'email'}
+          label={'Correo electronico'}
+          placeholder={'pedro@gmail.com'}
           register={register}
         />
         <div>
           <InputPassword
             errors={errors.password}
-            label={"Contraseña"}
-            name={"password"}
-            placeholder={"******"}
+            label={'Contraseña'}
+            name={'password'}
+            placeholder={'******'}
             register={register}
           />
         </div>
@@ -56,9 +64,9 @@ export const Register = () => {
       </form>
 
       <FormFooter
-        question={"¿Ya tenes una cuenta?"}
-        text={"Iniciar sesion"}
-        route={"/signin"}
+        question={'¿Ya tenes una cuenta?'}
+        text={'Iniciar sesion'}
+        route={'/signin'}
       />
     </div>
   );
