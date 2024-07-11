@@ -5,6 +5,7 @@ import { SignInForm } from "./SignInForm";
 import { useContext } from "react";
 import { AuthContext } from "../../../context/Auth/AuthContext";
 import { Navigate } from "react-router-dom";
+import { Toaster } from "sonner";
 
 export const SignIn = () => {
   const { isAuthenticated } = useContext(AuthContext);
@@ -15,6 +16,7 @@ export const SignIn = () => {
 
   return (
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+      <Toaster richColors position="top-center" closeButton />
       <FormHeader title={"Iniciar sesion"} />
 
       <SignInForm />

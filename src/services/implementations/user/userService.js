@@ -23,5 +23,5 @@ export const SignInUser = (email, password) => {
 };
 
 export const RegisterUser = (newUser) => {
-  return api.post('/authenticate/login', newUser);
+  return api.post('/authenticate/register', newUser);
 };

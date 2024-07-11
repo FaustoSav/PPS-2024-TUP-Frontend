@@ -1,28 +1,43 @@
-import {  useState } from 'react';
+import { useState } from 'react';
 
 import { RegisterUser } from '../../services/implementations/user/userService';
-//import { useNavigate } from 'react-router-dom';
+import { toast } from 'sonner';
+import { useNavigate } from 'react-router-dom';
 
 export const useRegister = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
 
   function Register(newUser) {
     try {
       setLoading(true);
-      RegisterUser(newUser)
+      const user = {
+        userName: newUser.name + newUser.lastName,
+        firstName: newUser.name,
+        lastName: newUser.lastName,
+        password: newUser.password,
+        email: newUser.email,
+      };
+      RegisterUser(user)
         .then((response) => {
-            console.log(response)
-          //navigate('/login');
+          console.log('Response Register:', response);
+          console.log('User enviado: ', user);
+          toast.success(
+            'Usuario creado correctamente, por favor pruebe iniciar sesión'
+          );
+          setTimeout(() => {
+            navigate('/signin');
+          }, 3000);
         })
         .catch((err) => {
-          setError(err);
-          console.log('ThenCatch Error Register: ' + err);
+          setError(err.response.data);
+          toast.error(err.response.data)
         });
     } catch (error) {
-      setError(error);
-      console.log('TryCatch erro Register: ' + error);
+      setError(error.response.data);
+
+      toast.error(error.response.data);
     } finally {
       setLoading(false);
     }

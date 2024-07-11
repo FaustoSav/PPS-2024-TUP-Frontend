@@ -15,7 +15,7 @@ export const usePostOrder = () => {
 
     try {
       const newOrder = {
-        userId: 1,
+        userId: 4,
         orderDetails: items.map((item) => {
           return {
             productId: item.id,
