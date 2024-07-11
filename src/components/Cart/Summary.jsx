@@ -12,6 +12,8 @@ export const Summary = () => {
   }, [cartItems])
 
   const navigate = useNavigate()
+
+  
  
   return (
     <article className="bg-primaryDark w-full h-full customPadding rounded-lg   text-white  pb-5  ">

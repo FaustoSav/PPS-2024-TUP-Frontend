@@ -3,14 +3,11 @@ import { signInScheme } from '../../../services/validator/singInScheme';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Input } from '../Input';
 import { InputPassword } from '../InputPassword';
-
-import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../../context/Auth/AuthContext';
-import { useContext } from 'react';
-import { SignInUser } from '../../../services/implementations/user/userService';
+import { useLogin } from '../../../hooks/user/useLogin';
 export const SignInForm = () => {
-  const navigate = useNavigate();
-  const { saveUserToken } = useContext(AuthContext);
+  
+  const { Login } = useLogin();
+
   const {
     register,
     handleSubmit,
@@ -18,18 +15,9 @@ export const SignInForm = () => {
   } = useForm({
     resolver: yupResolver(signInScheme),
   });
-  // Password = "has3vgHdhDfbsSajsd",
-  // Email = "usuario1@gmail.com",
+
   const onSubmit = (userData) => {
-    SignInUser(userData.email, userData.password)
-      .then((AuthResponse) => {
-        saveUserToken(AuthResponse.data);
-        navigate('/');
-      })
-      .catch((err) => {
-        //Agregar etiqueta de error en el front
-        console.log('Error Iniciar sesion ' + err);
-      });
+    Login(userData);
   };
   return (
     <form

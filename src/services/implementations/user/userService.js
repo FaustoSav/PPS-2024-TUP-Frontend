@@ -1,5 +1,4 @@
-import { api } from "../../axios";
-
+import { api } from '../../axios';
 
 export const GetUserById = (id) => {
   return api.get('/users/' + id);
@@ -17,8 +16,12 @@ export const UpdateUsername = (id, newName) => {
 };
 
 export const SignInUser = (email, password) => {
-  return api.post('/login/', {
+  return api.post('/authenticate/login', {
     email: email,
     password: password,
   });
+};
+
+export const RegisterUser = (newUser) => {
+  return api.post('/authenticate/login', newUser);
 };

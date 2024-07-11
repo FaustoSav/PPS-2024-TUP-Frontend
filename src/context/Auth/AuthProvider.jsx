@@ -2,13 +2,13 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
 import { AuthContext } from './AuthContext';
-// Asegúrate de usar 'jwt-decode' correctamente
 import { jwtDecode } from 'jwt-decode';
+
 export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem('token'));
   const [isAuthenticated, setIsAuthenticated] = useState(true);
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
-
+  
   useEffect(() => {
     verifyUserSession();
   }, []);
@@ -41,6 +41,7 @@ export const AuthProvider = ({ children }) => {
   const handleLogout = () => {
     clearToken();
     setIsAuthenticated(false);
+    
   };
 
   const getToken = () => {

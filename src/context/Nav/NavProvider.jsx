@@ -4,6 +4,8 @@ import { NavContext } from "./NavContext";
 
 export const NavProvider = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
+
 
   useEffect(() => {
     if (showMenu) {
@@ -24,6 +26,8 @@ export const NavProvider = ({ children }) => {
         showMenu,
         setShowMenu,
         ProductCategories,
+        showDropdown,
+        setShowDropdown
       }}
     >
       {children}

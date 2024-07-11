@@ -1,9 +1,9 @@
-import { ToggleButton } from "./ToggleButton";
-import { Logo } from "../../icons/Logo";
-import { Menu } from "./Menu";
-import { NavProvider } from "./../../context/Nav/NavProvider";
-import { User } from "./../../icons/User";
-import { CartButton } from "../Cart/CartButton";
+import { ToggleButton } from './ToggleButton';
+import { Logo } from '../../icons/Logo';
+import { Menu } from './Menu';
+import { NavProvider } from './../../context/Nav/NavProvider';
+import { User } from './../../icons/User';
+import { CartButton } from '../Cart/CartButton';
 
 
 export const NavBar = () => {
@@ -16,6 +16,7 @@ export const NavBar = () => {
             <Menu />
             <CartButton />
             <User customStyle="hidden sm:bock" />
+         
             <ToggleButton />
           </div>
         </div>
