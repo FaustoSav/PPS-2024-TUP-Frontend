@@ -12,13 +12,17 @@ export const GetAllOrders = (token) => {
   });
 };
 export const PostOrder = (token, newOrder) => {
-  return api.post(
-    '/orders',
-    newOrder,
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    }
-  );
+  return api.post('/orders', newOrder, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+};
+
+export const GetCurrentUserOrder = (token) => {
+  return api.get('/orders/current', {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
 };

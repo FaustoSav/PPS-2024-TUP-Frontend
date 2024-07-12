@@ -5,7 +5,6 @@ import { NavProvider } from './../../context/Nav/NavProvider';
 import { User } from './../../icons/User';
 import { CartButton } from '../Cart/CartButton';
 
-
 export const NavBar = () => {
   return (
     <NavProvider>
@@ -16,7 +15,7 @@ export const NavBar = () => {
             <Menu />
             <CartButton />
             <User customStyle="hidden sm:bock" />
-         
+
             <ToggleButton />
           </div>
         </div>

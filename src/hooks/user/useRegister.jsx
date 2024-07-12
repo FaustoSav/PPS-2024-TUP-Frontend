@@ -32,7 +32,7 @@ export const useRegister = () => {
         })
         .catch((err) => {
           setError(err.response.data);
-          toast.error(err.response.data)
+          toast.error(err.response.data);
         });
     } catch (error) {
       setError(error.response.data);

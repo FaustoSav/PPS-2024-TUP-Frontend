@@ -11,24 +11,21 @@
   }
 
 
-  
-#style-4::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #111111;
-}
 
-#style-4::-webkit-scrollbar
-{
-	width: 10px;
-	background-color: #F5F5F5;
-}
+  #style-4::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #111111;
+  }
 
-#style-4::-webkit-scrollbar-thumb
-{
-	background-color: #F5F5F5;
-	
-}
+  #style-4::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5;
+  }
+
+  #style-4::-webkit-scrollbar-thumb {
+    background-color: #F5F5F5;
+
+  }
 
 }
 
@@ -40,19 +37,24 @@
   .center-absolute {
     @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
   }
+
   .bg-dark-white {
     @apply bg-BgDark dark:bg-bgLight
   }
-  .bg-light-dark{
+
+  .bg-light-dark {
     @apply bg-bgLight dark:bg-BgDark
   }
+
   .text-light-dark {
     @apply text-light dark:text-primaryDark
   }
+
   .text-dark-light {
     @apply text-primaryDark dark:text-light
   }
-  .input-placeholder{
+
+  .input-placeholder {
     @apply placeholder:
   }
 
@@ -70,7 +72,7 @@
   }
 
   .subtitle {
-    @apply font-[600] tracking-wider text-2xl w-full
+    @apply font-[600] text-base tablet:text-xl tracking-wider sm:text-2xl w-full
   }
 
   .bg-opac {
@@ -78,11 +80,13 @@
   }
 
   .logo {
-    @apply w-[24px] cursor-pointer tablet:w-[26px] sm:w-[30px] fill-white stroke-white dark:fill-black dark:stroke-black 
+    @apply w-[24px] cursor-pointer tablet:w-[26px] sm:w-[30px] fill-white stroke-white dark:fill-black dark:stroke-black
   }
-  .logo-unsized{
-    @apply fill-white  dark:fill-black 
+
+  .logo-unsized {
+    @apply fill-white dark:fill-black
   }
+
   .borderLight {
     @apply border-[1px] border-white border-opacity-20
   }
@@ -93,6 +97,10 @@
 
   .border-light-dark {
     @apply borderLight dark:borderDark
+  }
+
+  .border-dark-light {
+    @apply borderDark dark:borderLight
   }
 
   .customPadding {
@@ -122,11 +130,13 @@
   /* FORM */
 
   .input {
-    @apply block w-full rounded-md p-1.5 text-sm text-gray-900 shadow-sm   placeholder:text-gray-400  tracking-wider sm:leading-6 placeholder:text-[13px] tablet:text-base tablet:placeholder:text-sm dark:bg-secondaryDark dark:borderLight dark:border-opacity-10 borderDark dark:borderLight dark:text-darkLight
+    @apply block w-full rounded-md p-1.5 text-sm text-gray-900 shadow-sm placeholder:text-gray-400 tracking-wider sm:leading-6 placeholder:text-[13px] tablet:text-base tablet:placeholder:text-sm dark:bg-secondaryDark dark:borderLight dark:border-opacity-10 borderDark dark:borderLight dark:text-darkLight
   }
-  .label{
+
+  .label {
     @apply font-[500] text-dark-light tracking-tight text-sm tablet:text-base dark:font-[400]
   }
+
   .input-container {
     @apply flex flex-col
   }
@@ -135,4 +145,18 @@
     @apply flex w-full justify-center rounded-md bg-primaryDark px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm
   }
 
+
+
+  /* PROFILE */
+
+  .profile-item {
+
+    @apply flex flex-col items-start justify-center w-full border-dark-light border-t-0 border-x-0 gap-2 px-2 py-3  border-neutral-200  dark:border-t-0 dark:border-x-0 sm:flex-row  sm:justify-start sm:py-7   
+  }
+  .profile-item-title{
+    @apply font-medium  text-[15px] tracking-tight  text-dark-light sm:w-1/4
+  }
+  .profile-item-detail{
+    @apply text-dark-light dark:text-stone-400
+  }
 }

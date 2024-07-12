@@ -1,9 +1,9 @@
-import { Outlet } from "react-router-dom";
-import { NavBar } from "./components/Nav/NavBar";
-import Footer from "./components/Footer/Footer";
-import { ProductsProvider } from "./context/Products/ProductsProvider";
-import FornitureChatBot from "./components/shared/Chatbot/FornitureChatbot";
-import { Toaster } from "sonner";
+import { Outlet } from 'react-router-dom';
+import { NavBar } from './components/Nav/NavBar';
+import Footer from './components/Footer/Footer';
+import { ProductsProvider } from './context/Products/ProductsProvider';
+import FornitureChatBot from './components/shared/Chatbot/FornitureChatbot';
+import { Toaster } from 'sonner';
 
 function App() {
   return (
