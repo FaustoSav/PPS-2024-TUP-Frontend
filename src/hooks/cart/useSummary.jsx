@@ -14,5 +14,5 @@ export const useSummary = () => {
     setTotal((newTotal + costoEnvio).toFixed(2));
   }
 
-  return { SetCartSummary, subTotal, total, costoEnvio,cartItems };
+  return { SetCartSummary, subTotal, total, costoEnvio, cartItems };
 };

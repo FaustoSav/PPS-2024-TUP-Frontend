@@ -14,7 +14,7 @@ export const CheckoutSummary = () => {
   }, [cartItems]);
   return (
     <section className="flex flex-col justify-center items-center borderDark  pt-0 rounded-xl mt-6  max-h-[520px] dark:bg-primaryDark w-full md:w-1/2 ">
-      <div className='overflow-y-scroll  px-6  w-full ' id='style-4'>
+      <div className="overflow-y-scroll  px-6  w-full " id="style-4">
         {cartItems.map((item, index) => {
           return (
             <article
@@ -44,16 +44,15 @@ export const CheckoutSummary = () => {
           );
         })}
       </div>
-      <div className='w-full dark:bg-secondaryDark borderDark border-b-0 border-x-0  rounded-b sm:rounded-b-lg px-5'>
-      <CartSummaryItem price={subTotal} title={'Sub total'} />
-      <CartSummaryItem price={costoEnvio} title={'Costo de envío'} />
-      <CartSummaryItem
-        price={total}
-        customStyle={'font-semibold'}
-        title={'Total'}
-      />
+      <div className="w-full dark:bg-secondaryDark borderDark border-b-0 border-x-0  rounded-b sm:rounded-b-lg px-5">
+        <CartSummaryItem price={subTotal} title={'Sub total'} />
+        <CartSummaryItem price={costoEnvio} title={'Costo de envío'} />
+        <CartSummaryItem
+          price={total}
+          customStyle={'font-semibold'}
+          title={'Total'}
+        />
       </div>
-      
     </section>
   );
 };

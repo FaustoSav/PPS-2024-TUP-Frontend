@@ -4,17 +4,27 @@ import { useParams } from 'react-router-dom';
 import { Loader } from '../shared/Loader';
 import { useProductsByCategoryId } from '../../hooks/products/useProductsByCategoryId';
 import { Error } from '../shared/Error';
+import { Subtitle } from '../shared/Subtitle';
+import { useEffect, useState } from 'react';
 
 export const ProductList = () => {
   const { categoryId } = useParams();
   const { productsByCategory, loading, error } =
     useProductsByCategoryId(categoryId);
+  const [title, setTitle] = useState('Muebles Chicos');
+
+  useEffect(() => {
+    categoryId == 2 && setTitle('Muebles Medianos');
+    categoryId == 3 && setTitle('Muebles Grandes');
+  }, [categoryId]);
+
   if (loading) return <Loader />;
   if (error) return <Error />;
 
   return (
     <section className="">
       <GoBackButton />
+      <Subtitle text={title} />
       <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8 xl:grid-cols-4 ">
         {productsByCategory?.map((product) => (
           <ProductCard
@@ -23,7 +33,7 @@ export const ProductList = () => {
             price={product.price}
             stock={product.available}
             productId={product.id}
-            available = {product.available}
+            available={product.available}
           />
         ))}
       </div>

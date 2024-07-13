@@ -15,7 +15,7 @@ export const Order = ({ order }) => {
 
         <div
           onClick={() => setShowDetails((prevState) => !prevState)}
-          className=" relative text-center text-dark-light bg-light-dark py-2 rounded-md opacity-80 mb-5 border-[1px] border-black customShadow  px-10  "
+          className=" relative cursor-pointer hover:drop-shadow-md   text-center text-dark-light bg-light-dark py-2 rounded-md opacity-80 mb-5 border-[1px] border-black customShadow  px-10  "
         >
           {showDetails ? 'Ocultar detalles' : 'Ver detalles'}
           <span
