@@ -15,7 +15,7 @@ function App() {
           <Outlet />
         </div>
         <Footer />
-        <FornitureChatBot />
+        {/* <FornitureChatBot /> */}
       </div>
     </ProductsProvider>
   );

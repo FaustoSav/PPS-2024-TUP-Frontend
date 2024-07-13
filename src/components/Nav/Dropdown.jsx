@@ -30,10 +30,10 @@ export const Dropdown = () => {
         </>
       ) : (
         <>
-          <li className="dropdown-item" onClick={() => navigate('/login')}>
+          <li className="dropdown-item" onClick={() => navigate('/signin')}>
             Iniciar Sesion
           </li>
-          <li className="dropdown-item" onClick={() => navigate('/register')}>
+          <li className="dropdown-item" onClick={() => navigate("/register")}>
             Registrarse
           </li>
         </>

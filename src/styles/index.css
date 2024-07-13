@@ -60,7 +60,7 @@
 
 
   body {
-    @apply font-montserrat text-secondaryDark
+    @apply font-inter text-secondaryDark
   }
 
   .theme-icon__container {
@@ -158,5 +158,22 @@
   }
   .profile-item-detail{
     @apply text-dark-light dark:text-stone-400
+  }
+
+
+  /* ORDER */
+
+  
+  .order_header-container{
+    @apply py-5 flex items-center justify-between  text-sm
+  }
+  .order_header-title{
+    @apply font-medium text-dark-light
+  }
+  .oder_header-detail{
+    @apply  text-neutral-500 
+  }
+  .divide-dark-light{
+    @apply divide-y-[.5px] divide-secondaryDark divide-opacity-10 dark:divide-light dark:divide-opacity-10 
   }
 }

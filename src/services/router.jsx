@@ -53,10 +53,6 @@ const routes = [
         path: "/cart",
         element: <CartPage />,
       },
-      // {
-      //   path: "/aboutus",
-      //   element: <AboutUs />,
-      // },
     ],
   },
   {

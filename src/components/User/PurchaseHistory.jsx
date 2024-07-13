@@ -23,9 +23,12 @@ export const PurchaseHistory = () => {
       <h1 className="font-semibold text-dark-light pt-5">
         Historial de compras
       </h1>
-      <section className="flex flex-col items-center justify-evenly gap-2">
+      <h3 className="text-sm font-medium  text-neutral-500">
+        Detalle de compras realizadas, precios y fechas.
+      </h3>
+      <section className=" mt-5 flex flex-col justify-center items-center gap-5 mb-5">
         {userOrders.map((order) => {
-         return (<Order key={order.id} order={order} />) 
+          return <Order key={order.id} order={order} />;
         })}
       </section>
     </div>
