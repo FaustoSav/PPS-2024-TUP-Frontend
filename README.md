@@ -30,15 +30,9 @@ Instrucciones para Correr el Proyecto
    yarn install
    ```
 
-3. Configurar Variables de Entorno
 
-   Crea un archivo `.env` en la raíz del directorio `frontend` y configura las variables necesarias. Ejemplo:
 
-   ```bash
-   REACT_APP_API_URL=http://localhost:5000/api
-   ```
-
-4. Correr la Aplicación en Modo Desarrollo
+3. Correr la Aplicación en Modo Desarrollo
 
    Si usas npm:
 
@@ -54,35 +48,8 @@ Instrucciones para Correr el Proyecto
 
    La aplicación estará disponible en `http://localhost:3000`.
 
-5. Construir para Producción
 
-   Si usas npm:
 
-   ```bash
-   npm run build
-   ```
-
-   Si prefieres yarn:
-
-   ```bash
-   yarn build
-   ```
-
-   Esto creará una versión optimizada de la aplicación en el directorio `build`.
-
-6. Ejecución de Pruebas
-
-   Si usas npm:
-
-   ```bash
-   npm test
-   ```
-
-   Si prefieres yarn:
-
-   ```bash
-   yarn test
-   ```
 
 Estructura de Directorios
 
@@ -104,13 +71,7 @@ Dependencias Principales
 - `yup`
 - `tailwindcss`
 
-Guía de Contribución
 
-1. Hacer un Fork del Repositorio
-2. Crear una Rama para tu Funcionalidad (git checkout -b feature/tu-funcionalidad)
-3. Commit tus Cambios (git commit -m 'Agregar nueva funcionalidad')
-4. Hacer Push a la Rama (git push origin feature/tu-funcionalidad)
-5. Crear un Pull Request
 
 Contacto
 
