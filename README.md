@@ -63,13 +63,13 @@ Estructura de Directorios
 
 Dependencias Principales
 
-- `react`
 - `react-dom`
 - `react-router-dom`
 - `axios`
 - `react-hook-form`
 - `yup`
 - `tailwindcss`
+- `jwt-decode`
 
 
 
