@@ -12,7 +12,7 @@ Instrucciones para Correr el Proyecto
 1. Clonar el Repositorio
 
    ```bash
-   git clone [https://github.com/tu_usuario/tu_repositorio.git](https://github.com/FaustoSav/PPS-2024-TUP-Frontend.git)
+   git clone https://github.com/FaustoSav/PPS-2024-TUP-Frontend.git
    cd PPS-2024-TUP-Frontend
    ```
 
